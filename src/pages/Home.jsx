@@ -1,11 +1,21 @@
 import React from "react";
 import "./Home.css";
+import "./Theory.css";
 import Header from "../components/Header";
+import maclenin from "../assets/maclenin.png";
+import triethoc from "../assets/triethoc.jpg";
+
 const Home = () => {
   return (
     <div className="home-container">
       <Header />
       {/* Hero Section */}
+
+      <section className="image-section">
+        <div className="banner-content"></div>
+          <img src={maclenin} alt="Banner" className="lyluan" />
+      </section>
+
       <section className="hero-section">
         <div className="hero-content">
           <p className="hero-description">
@@ -46,7 +56,7 @@ const Home = () => {
             <div className="card-arrow">→</div>
           </div>
 
-          <div className="card" onClick={() => window.location.href = '/quiz'}>
+          <div className="card-quiz" onClick={() => window.location.href = '/quiz'}>
             <div className="card-icon quiz-icon">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
@@ -61,9 +71,17 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="image-section">
+        <div className="banner-content"></div>
+        <img src={triethoc} alt="Banner" className="lyluan" />
+      </section>
+
       {/* Quote Section */}
       <section className="quote-section">
         <div className="quote-container">
+
+          
+
           <blockquote className="quote">
             <p>
               "Thực tiễn cao hơn nhận thức lý thuyết vì nó không những có phẩm giá của tính phổ biến 
