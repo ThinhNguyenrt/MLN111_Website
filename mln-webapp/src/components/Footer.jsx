@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -18,7 +18,7 @@ const Footer = () => {
           <ul>
             <li><a href="#">Trang chủ</a></li>
             <li><a href="#">Lý thuyết</a></li>
-            <li><a href="#">Tình huống</a></li>
+            <li><a href="#">Liên hệ thực tế</a></li>
             <li><a href="#">Quiz</a></li>
             <li><a href="#">Phụ lục</a></li>
           </ul>

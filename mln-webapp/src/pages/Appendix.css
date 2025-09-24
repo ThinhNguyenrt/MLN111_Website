@@ -1,0 +1,145 @@
+/* Appendix.css - Scoped styles chỉ cho trang Appendix */
+
+/* Scope tất cả styles trong .appendix-page để tránh ảnh hưởng global */
+.appendix-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #dfe6e9 25%, #b2bec3 50%, #636e72 75%, #2d3436 100%);
+}
+
+.appendix-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.appendix-page .main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Animation system */
+.appendix-page .fade-in-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.appendix-page .fade-in-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.appendix-page .delay-200 { transition-delay: 0.2s; }
+.appendix-page .delay-400 { transition-delay: 0.4s; }
+.appendix-page .delay-600 { transition-delay: 0.6s; }
+
+/* Title Section */
+.appendix-page .title-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.appendix-page .page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #0984e3, #00cec9, #6c5ce7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.appendix-page .title-underline {
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(45deg, #0984e3, #6c5ce7);
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+/* Tools Section */
+.appendix-page .tools-section {
+  margin-bottom: 3rem;
+}
+
+.appendix-page .tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.appendix-page .tool-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-left: 6px solid #0984e3;
+}
+
+.appendix-page .tool-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.appendix-page .tool-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 1rem;
+}
+
+.appendix-page .tool-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #636e72;
+}
+
+/* Integrity Section */
+.appendix-page .integrity-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  margin-top: 3rem;
+  border-top: 8px solid #6c5ce7;
+}
+
+.appendix-page .integrity-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2d3436;
+}
+
+.appendix-page .integrity-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #636e72;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appendix-page .container {
+    padding: 2rem 1rem;
+  }
+
+  .appendix-page .page-title {
+    font-size: 2.2rem;
+  }
+
+  .appendix-page .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appendix-page .integrity-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .appendix-page .integrity-text {
+    text-align: center;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -6,11 +7,11 @@ const Header = () => {
     <header className="header">
       <nav>
         <ul className="nav-links">
-          <li><a href="#">Trang chủ</a></li>
-          <li><a href="#">Lý thuyết</a></li>
-          <li><a href="#">Tình huống thực tế</a></li>
-          <li><a href="#">Quiz</a></li>
-          <li><a href="#">Phụ lục</a></li>
+          <li><Link to="/">Trang chủ</Link></li>
+          <li><Link to="/ly-thuyet">Lý thuyết</Link></li>
+          <li><Link to="/lien-he-thuc-tien">Liên hệ thực tiễn</Link></li>
+          <li><Link to="/quiz">Quiz</Link></li>
+          <li><Link to="/phu-luc-ai">Phụ lục AI</Link></li>
         </ul>
       </nav>
     </header>

@@ -1,0 +1,134 @@
+.theory-container {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+
+.theory-hero {
+  margin-top: 60px; 
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(120deg, #ff758c, #ff7eb3);
+  color: white;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theory-hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.theory-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Sections */
+.theory-section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.theory-section h2 {
+  font-size: 1.8rem;
+  color: #e63946;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.theory-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: center;
+}
+
+.theory-section.alt {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Cards */
+.theory-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.theory-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transform: scale(0.95);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theory-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ff7eb3;
+}
+
+.theory-card:active {
+  transform: scale(0.97);
+}
+
+.theory-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #6a0572;
+}
+
+.theory-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Card fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Lists */
+.theory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.theory-list li {
+  font-size: 1.1rem;
+  margin: 0.6rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #444;
+}
+
+.theory-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #e63946;
+  font-weight: bold;
+}

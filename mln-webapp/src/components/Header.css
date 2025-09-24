@@ -50,3 +50,12 @@ ul {
 .nav-links li a:hover::after {
   width: 100%;
 }
+
+/* Active link styling */
+.nav-links li a.active {
+  color: #ffb703;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+}
