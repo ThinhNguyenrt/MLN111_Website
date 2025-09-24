@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import "./Quiz.css";
+import "./Theory.css";
+import "./Home.css"
+import quiz from "../assets/quiz.jpg";
 
 const questions = [
   {
@@ -57,7 +60,7 @@ const questions = [
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(15);
+  const [timeLeft, setTimeLeft] = useState(45);
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [timeRecords, setTimeRecords] = useState([]);
@@ -81,7 +84,7 @@ const Quiz = () => {
 
     setTimeout(() => {
       setSelectedAnswer(null);
-      setTimeLeft(15);
+      setTimeLeft(45);
       setQuestionStartTime(Date.now());
       setCurrentQuestion(currentQuestion + 1);
     }, 2000); // 2s để hiện kết quả đúng/sai
@@ -94,6 +97,12 @@ const Quiz = () => {
   return (
     <>
       <Header />
+
+      <section className="image-section">
+        <div className="banner-content"></div>
+        <img src={quiz} alt="Banner" className="lyluan" />
+      </section>
+
       <div className="quiz-page">
         <div className="quiz-container">
           {currentQuestion < questions.length ? (
@@ -152,6 +161,21 @@ const Quiz = () => {
           )}
         </div>
       </div>
+
+      <section className="quote-section">
+        <div className="quote-container">
+
+
+
+          <blockquote className="quote">
+            <p>
+              "Thực tiễn cao hơn nhận thức lý thuyết vì nó không những có phẩm giá của tính phổ biến
+              mà còn có phẩm giá của tính hiện thực trực tiếp."
+            </p>
+            <cite>- V.I.Lenin</cite>
+          </blockquote>
+        </div>
+      </section>
     </>
   );
 };
