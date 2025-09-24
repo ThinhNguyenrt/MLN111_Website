@@ -83,10 +83,9 @@ const Appendix = () => {
             <p className="integrity-text">
               - Kiểm chứng thông tin: đối chiếu nguồn báo chí chính thống, học
               liệu học thuật. <br />
-              - Nguồn tham khảo: báo Tuổi Trẻ, tài liệu triết học Mác-Lênin.{" "}
+              - Nguồn tham khảo: báo Tuổi Trẻ- https://tuoitre.vn/cuc-dang-kiem-96-xe-chay-xang-phai-ngung-ban-la-khong-chinh-xac-20250923103731846.htm.{" "}
               <br />
-              - Cam kết liêm chính trong học thuật: không sao chép, tôn trọng
-              nguồn, và chịu trách nhiệm về nội dung trình bày.
+              - Nhóm cam kết liêm chính trong học thuật, không hoàn toàn phụ thuộc vào AI, AI chỉ đóng vai trò như công cụ hỗ trợ.
             </p>
           </div>
         </div>
