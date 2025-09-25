@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import "./Theory.css";
 import Header from "../components/Header";
-import maclenin from "../assets/maclenin.png";
+import maclenin from "../assets/maclenin.jpg";
 import triethoc from "../assets/triethoc.jpg";
 
 const Home = () => {
