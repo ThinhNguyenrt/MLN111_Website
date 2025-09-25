@@ -202,6 +202,42 @@
   margin: .4rem 0;
 }
 
+  /* Làm mờ 2 đáp án trong 50:50 */
+.options button.disabled-option {
+  background: #e5e5e5;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* Nhóm nút trợ giúp */
+.help-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.help-buttons .help-btn {
+  min-width: 140px;
+}
+
+.next-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #00b894, #55efc4);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background: linear-gradient(45deg, #00cec9, #81ecec);
+}
+
 /* Animation */
 @keyframes fadeIn {
   from {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronRight, Lightbulb, CheckCircle, AlertCircle, BookOpen, Zap } from "lucide-react";
 import Header from "../components/Header";
 import "./Application.css";
-
+import AI from "../assets/AI.png";
 const Application = () => {
   const [visibleSections, setVisibleSections] = useState({});
 
@@ -79,24 +79,29 @@ const Application = () => {
   return (
     <div className="application-page">
       <Header />
-      
+
       <div className="container">
         {/* Title Section */}
         <div className="title-section animate-section" id="title">
-          <div className={`fade-in-content ${visibleSections.title ? 'visible' : ''}`}>
-            <h2 className="page-title">
-              Liên hệ với đời sống hiện nay
-            </h2>
+          <div
+            className={`fade-in-content ${
+              visibleSections.title ? "visible" : ""
+            }`}
+          >
+            <h2 className="page-title">Liên hệ với đời sống hiện nay</h2>
             <div className="title-underline"></div>
           </div>
         </div>
 
         {/* Main Content */}
         <div className="main-content">
-          
           {/* Introduction Section */}
           <div className="animate-section intro-section" id="intro">
-            <div className={`fade-in-content delay-200 ${visibleSections.intro ? 'visible' : ''}`}>
+            <div
+              className={`fade-in-content delay-200 ${
+                visibleSections.intro ? "visible" : ""
+              }`}
+            >
               <div className="intro-card">
                 <h3 className="section-title">
                   <div className="title-icon">
@@ -105,8 +110,9 @@ const Application = () => {
                   Ứng dụng trong thời đại số
                 </h3>
                 <p className="intro-text">
-                  Nhận thức luận chủ nghĩa duy vật biện chứng giúp con người chọn lọc nguồn thông tin 
-                  thích hợp để không tin tưởng những nguồn tin không chính thống.
+                  Nhận thức luận chủ nghĩa duy vật biện chứng giúp con người
+                  chọn lọc nguồn thông tin thích hợp để không tin tưởng những
+                  nguồn tin không chính thống.
                 </p>
               </div>
             </div>
@@ -114,14 +120,16 @@ const Application = () => {
 
           {/* Examples Section */}
           <div className="animate-section examples-section" id="examples">
-            <div className={`fade-in-content delay-400 ${visibleSections.examples ? 'visible' : ''}`}>
+            <div
+              className={`fade-in-content delay-400 ${
+                visibleSections.examples ? "visible" : ""
+              }`}
+            >
               <div className="examples-grid">
                 {examples.map((example, index) => (
                   <div key={index} className="example-card">
                     <div className="card-content">
-                      <div className="card-icon">
-                        {example.icon}
-                      </div>
+                      <div className="card-icon">{example.icon}</div>
                       <div className="card-text">
                         <h4 className="card-title">{example.title}</h4>
                         <p className="card-description">{example.content}</p>
@@ -135,12 +143,25 @@ const Application = () => {
 
           {/* AI Case Study Section */}
           <div className="animate-section ai-case-section" id="ai-case">
-            <div className={`fade-in-content delay-600 ${visibleSections['ai-case'] ? 'visible' : ''}`}>
+            <div
+              className={`fade-in-content delay-600 ${
+                visibleSections["ai-case"] ? "visible" : ""
+              }`}
+            >
+              <div className="ai-image-wrapper">
+                  <img
+                    src={AI}
+                    alt="AI Brain"
+                    className="ai-image"
+                  />
+                </div>
               <div className="ai-case-card">
-                <h3 className="ai-case-title">
-                  Ví dụ thực tế: <span className="highlight">Trí tuệ nhân tạo (AI)</span>
-                </h3>
                 
+                <h3 className="ai-case-title">
+                  Ví dụ thực tế:{" "}
+                  <span className="highlight">Trí tuệ nhân tạo (AI)</span>
+                </h3>
+
                 <div className="ai-analysis-grid">
                   {aiAnalysis.map((phase, index) => (
                     <React.Fragment key={index}>
@@ -163,18 +184,21 @@ const Application = () => {
 
           {/* Lessons Section */}
           <div className="animate-section lessons-section" id="lessons">
-            <div className={`fade-in-content delay-800 ${visibleSections.lessons ? 'visible' : ''}`}>
+            <div
+              className={`fade-in-content delay-800 ${
+                visibleSections.lessons ? "visible" : ""
+              }`}
+            >
               <div className="lessons-card">
-                <h3 className="lessons-title">
-                  Bài học rút ra
-                </h3>
-                
+                <h3 className="lessons-title">Bài học rút ra</h3>
+
                 <div className="lessons-list">
                   {lessons.map((lesson, index) => (
-                    <div key={index} className={`lesson-item lesson-${index + 1}`}>
-                      <div className="lesson-icon">
-                        {lesson.icon}
-                      </div>
+                    <div
+                      key={index}
+                      className={`lesson-item lesson-${index + 1}`}
+                    >
+                      <div className="lesson-icon">{lesson.icon}</div>
                       <div className="lesson-content">
                         <h4 className="lesson-title">{lesson.title}</h4>
                         <p className="lesson-description">{lesson.content}</p>
