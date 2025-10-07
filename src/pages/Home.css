@@ -1,129 +1,98 @@
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
   background-color: #f8f9fa;
   color: #212529;
   line-height: 1.6;
 }
 
-/* Home Container */
-.home-container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-
-.banner {
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 2rem 1rem;
-  margin: 2rem auto;
-  max-width: 1000px;
-  border-radius: 20px;
-}
-
-.banner-image {
-  width: 260px;
-  /* bigger on small/medium screens */
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-  border: 4px solid rgba(255, 255, 255, 0.08);
-}
-
-/* larger image on wide screens */
-@media (min-width: 900px) {
-  .banner-image {
-    width: 420px;
-    /* increase as needed */
-  }
-}
-
-/* Cards: subtle refinements for spacing and hover performance */
-.cards-container {
-  align-items: start;
-}
-
-.card,
-.card-quiz {
-  transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease;
-  will-change: transform;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Make quiz look like a centered featured card */
-.card-quiz {
-  max-width: 460px;
-  margin: 0 auto;
-  padding: 2.75rem;
-}
-
-/* Slightly bigger icons for better balance */
-.card-icon {
-  width: 84px;
-  height: 84px;
-}
-
-/* Improve contrast for card texts */
-.card-title {
-  color: #141414;
-}
-
-.card-description {
-  color: #6b6f73;
-}
-
-/* Hero Section */
-.hero-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, #e63946, #6a0572);
   color: white;
-  margin-bottom: 4rem;
-  margin-top:2rem;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+  z-index: 1;
 }
 
 .hero-content {
+  z-index: 2;
   max-width: 800px;
-  margin: 0 auto;
+  padding: 2rem;
 }
 
-.hero-description {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  margin: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
 
-.hero-description strong {
-  color: #ffb703;
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #f1f1f1;
+}
+
+.hero-btn {
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #e63946, #9d0208);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
   font-weight: 600;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ff4d6d, #c1121f);
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #333;
 }
 
 /* Cards Section */
 .cards-section {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 3rem 1rem 5rem;
+  background: #fff;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 0 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .card {
@@ -132,67 +101,14 @@ body {
   padding: 2.5rem;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s ease;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   border: 2px solid transparent;
 }
 
-.card-quiz {
-  background: white;
-  border-radius: 20px;
-  padding: 2.5rem;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid transparent;
-
-  /* keep the quiz card centered under the two cards */
-  grid-column: 1 / -1;
-  /* make it occupy a full row */
-  justify-self: center;
-  /* center it within that row */
-  max-width: 420px;
-  /* limit its width so it looks like a centered button/card */
-  margin: 0 auto;
-}
-
-/* on narrow screens restore normal behaviour */
-@media (max-width: 768px) {
-  .card-quiz {
-    padding: 2.5rem;
-    grid-column: auto;
-    max-width: none;
-  }
-}
-
-.card::before,
-.card-quiz::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 183, 3, 0.1), transparent);
-  transition: left 0.6s ease;
-}
-
-/* only move the pseudo element on hover of the card */
-.card:hover::before,
-.card-quiz:hover::before {
-  left: 100%;
-}
-
-/* apply transform/box-shadow/border on hover of the card itself */
-.card:hover,
-.card-quiz:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(230, 57, 70, 0.2);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.15);
   border-color: #e63946;
 }
 
@@ -204,150 +120,87 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.card-icon svg {
-  width: 40px;
-  height: 40px;
+  color: white;
 }
 
 .theory-icon {
   background: linear-gradient(135deg, #e63946, #d00000);
-  color: white;
 }
 
 .practice-icon {
   background: linear-gradient(135deg, #6a0572, #9d4edd);
-  color: white;
 }
 
 .quiz-icon {
   background: linear-gradient(135deg, #ffb703, #fb8500);
-  color: white;
-}
-
-.card:hover .card-icon {
-  transform: scale(1.1) rotate(5deg);
 }
 
 .card-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 0.8rem;
   color: #212529;
-  margin-bottom: 1rem;
-  transition: color 0.3s ease;
-}
-
-.card:hover .card-title {
-  color: #e63946;
 }
 
 .card-description {
-  font-size: 1.1rem;
-  color: #6c757d;
+  font-size: 1.05rem;
+  color: #555;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
 }
 
-.card-arrow {
-  font-size: 1.5rem;
-  color: #e63946;
-  font-weight: bold;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
-}
-
-.card:hover .card-arrow {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Quote Section */
+/* Vùng quote section */
 .quote-section {
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #6a0572, #e63946);
-  margin-top: 4rem;
-}
-
-.quote-container {
-  max-width: 800px;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* tránh ảnh tràn ra ngoài */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; /* hoặc chiều cao bạn muốn */
   text-align: center;
+  margin-top: 2rem;
 }
 
-.quote {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+/* Ảnh nền */
+.quote-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.quote p {
-  font-size: 1.3rem;
+/* Overlay mờ phủ lên ảnh */
+.quote-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 12, 163, 0.65); /* tím mờ */
+}
+
+/* Nội dung quote */
+.quote-content {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  max-width: 700px;
+  padding: 2rem;
   font-style: italic;
-  color: white;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.quote cite {
-  font-size: 1.1rem;
+.quote-content cite {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
   color: #ffb703;
-  font-weight: 600;
-  font-style: normal;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-description {
-    font-size: 1.2rem;
-  }
-
-  .cards-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .card {
-    padding: 2rem;
-  }
-
-  .hero-section {
-    padding: 3rem 1rem;
-  }
-
-  .quote {
-    padding: 2rem;
-  }
-
-  .quote p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-description {
-    font-size: 1.1rem;
-  }
-
-  .card-title {
-    font-size: 1.5rem;
-  }
-
-  .card-description {
-    font-size: 1rem;
-  }
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+  .intro-section { font-size: 1rem; }
 }
