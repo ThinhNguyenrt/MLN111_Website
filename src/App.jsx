@@ -14,6 +14,7 @@ const App = () => {
 
   return (
     <div className="app-container">
+      <Header />
       <main className="main-content fade">
         <Routes location={location}>
           <Route path="/" element={<Home />} />

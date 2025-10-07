@@ -1,13 +1,12 @@
 import React from "react";
 import "./Theory.css";
-import Header from "../components/Header";
 import lyluannhanthuc from "../assets/lyluannhanthuc.jpg";
 import lyluannhanthuc2 from "../assets/lyluannhanthuc2.jpg";
 
 const Theory = () => {
   return (
     <div className="theory-container">
-      <Header />
+    
 
       <section className="image-section">
         <img src={lyluannhanthuc} className="lyluan"></img>

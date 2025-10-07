@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronRight, Lightbulb, CheckCircle, AlertCircle, BookOpen, Zap } from "lucide-react";
-import Header from "../components/Header";
+
 import "./Application.css";
 import AI from "../assets/AI.png";
 const Application = () => {
@@ -78,7 +78,7 @@ const Application = () => {
 
   return (
     <div className="application-page">
-      <Header />
+      
 
       <div className="container">
         {/* Title Section */}
