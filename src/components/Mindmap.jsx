@@ -163,7 +163,7 @@ const edges = [
   { id: "e9-10", source: "9", target: "10", animated: true },
 ];
 
-const Mindmap = () => {
+const MindMap = () => {
   return (
     <div
       style={{
@@ -200,4 +200,4 @@ const Mindmap = () => {
   );
 };
 
-export default Mindmap;
+export default MindMap;

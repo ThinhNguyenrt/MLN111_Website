@@ -1,10 +1,28 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Theory.css";
 import lyluannhanthuc from "../assets/lyluannhanthuc.jpg";
 import lyluannhanthuc2 from "../assets/lyluannhanthuc2.jpg";
-import Mindmap from "../components/MindMap";
+import MindMap from "../components/MindMap";
 
 const Theory = () => {
+  useEffect(() => {
+    const sections = document.querySelectorAll(".theory-section, .image-section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 } // Hiện dần khi 20% phần tử vào khung nhìn
+    );
+    sections.forEach(sec => observer.observe(sec));
+
+    // Dọn dẹp khi component unmount
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="theory-container">
       <section className="image-section">
@@ -95,7 +113,7 @@ const Theory = () => {
           <strong>lý luận nhận thức</strong>,<strong>thực tiễn</strong> và{" "}
           <strong>quá trình nhận thức chân lý</strong>.
         </p>
-        <Mindmap />
+        <MindMap />
       </section>
       <section className="theory-section alt">
         <h2>D. Ý nghĩa phương pháp luận</h2>
